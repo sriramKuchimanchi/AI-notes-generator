@@ -1,0 +1,14 @@
+PORT=3001
+DATABASE_URL=postgresql://postgres:PASSWORD@localhost:5432/ai_notes_db
+GROQ_API_KEY=g
+PINECONE_API_KEY=
+PINECONE_INDEX_NAME=ai-notes-index
+COHERE_API_KEY=
+
+JWT_SECRET=your_super_secret_jwt_key
+JWT_EXPIRES_IN=
+EMAIL_USER=
+EMAIL_PASS=
+FRONTEND_URL=http://localhost:5173
+
+OPENAI_API_KEY=
