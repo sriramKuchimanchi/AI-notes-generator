@@ -14,13 +14,17 @@ api.interceptors.response.use(
   res => res,
   err => {
     if (err.response?.status === 401) {
-      localStorage.removeItem('token');
-      localStorage.removeItem('user');
-      window.location.href = '/login';
+      const isAuthRoute = ['/login', '/register', '/forgot-password', '/reset-password']
+        .includes(window.location.pathname)
+      if (!isAuthRoute) {
+        localStorage.removeItem('token')
+        localStorage.removeItem('user')
+        window.location.href = '/login'
+      }
     }
-    return Promise.reject(err);
+    return Promise.reject(err)  
   }
-);
+)
 
 export interface User {
   id: string;

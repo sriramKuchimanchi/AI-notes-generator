@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Plus, NotebookPen, Sparkles, MessageSquare, Brain, LayoutDashboard } from 'lucide-react'
+import { Plus, NotebookPen, Sparkles, MessageSquare, Brain } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import {
@@ -81,7 +81,7 @@ export default function WelcomeScreen({ onNotebookSelect, onRefresh }: WelcomeSc
               <Button className="gap-2 text-white rounded-xl px-8 h-12 text-base shadow-lg border-0 font-semibold"
                 style={{ background: 'linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%)' }}>
                 <Plus className="w-5 h-5" />
-                Create your first notebook
+                Create your notebook
               </Button>
             </DialogTrigger>
           <DialogContent>
