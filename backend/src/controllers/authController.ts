@@ -20,8 +20,9 @@ export async function register(req: Request, res: Response) {
     const hashed = await bcrypt.hash(password, 12);
     const result = await pool.query(
       'INSERT INTO users (name, email, password) VALUES ($1, $2, $3) RETURNING id, name, email',
-      [name, email, hashed]
+      [name, email, hashed] 
     );
+    
     const user = result.rows[0];
     const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET as string, { expiresIn: '7d' });
     res.status(201).json({ token, user });

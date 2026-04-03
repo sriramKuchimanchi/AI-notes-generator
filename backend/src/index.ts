@@ -5,7 +5,7 @@ import notesRoutes from './routes/notes';
 import searchRoutes from './routes/search';
 import chatRoutes from './routes/chat';
 import authRoutes from './routes/auth';
-import uploadRoutes from './routes/upload';
+import uploadRoutes from './services/upload';
 import quizRoutes from './routes/quiz';
 
 dotenv.config();
